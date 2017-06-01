@@ -1,0 +1,13 @@
+{
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "jquery": "*",
+    "jquery-validation": "*",
+    "jquery-validation-unobtrusive": "*",
+    "angular": "*",
+    "angular-route": "*",
+    "bootstrap": "*",
+    "popper.js": "*"
+  }
+}

@@ -1,0 +1,22 @@
+﻿<nav id="siamCoreHeader" class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#tests">Tests results</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dictionaries <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Systems</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Companies</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-form navbar-right" style="text-align: center">
+            <span class="label label-info">Version: {{$ctrl.backInfo.backendVersion}}</span>
+        </div>
+    </div>
+</nav>
