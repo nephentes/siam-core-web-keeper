@@ -37,6 +37,9 @@ namespace SiamCoreSite
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
             app.UseMvc();
+            
+            DefaultFilesOptions defaultFileOptions = new DefaultFilesOptions();
+            app.UseDefaultFiles(defaultFileOptions);
 
             app.UseStaticFiles(new StaticFileOptions()
             {
@@ -49,8 +52,7 @@ namespace SiamCoreSite
                 }
             });
 
-            DefaultFilesOptions defaultFileOptions = new DefaultFilesOptions();
-            app.UseDefaultFiles(defaultFileOptions);
+
         }
     }
 }
