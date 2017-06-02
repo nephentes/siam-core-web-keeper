@@ -6,3 +6,10 @@
 /SiamCoreSite/wwwroot/commons
 /SiamCoreSite/wwwroot/lib
 /.vs
+/CoreHelpers/bin
+/CoreHelpers/obj
+/SiamCoreServices/bin
+/SiamCoreServices/obj
+/SiamCoreRepository/bin
+/SiamCoreRepository/obj
+/packages

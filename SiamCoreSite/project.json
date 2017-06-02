@@ -12,11 +12,16 @@
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
-    "Microsoft.Extensions.Logging": "1.0.0",
+    "Microsoft.Extensions.Logging": "1.1.1",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.AspNetCore.StaticFiles": "1.1.2"
+    "Microsoft.AspNetCore.StaticFiles": "1.1.2",
+    "Autofac": "4.6.0",
+    "AutoMapper": "6.0.2",
+    "SiamCoreRepository": "1.0.0-*",
+    "CoreHelpers": "1.0.0-*",
+    "SiamCoreServices": "1.0.0-*"
   },
 
   "tools": {
@@ -25,11 +30,18 @@
 
   "frameworks": {
     "netcoreapp1.0": {
+      "dependencies": {
+        "HelpersPack": {
+          "target": "project"
+        }
+      
+      },
       "imports": [
-        "dotnet5.6",
+        "net462",
         "portable-net45+win8"
       ]
     }
+    //"net462": {}
   },
 
   "buildOptions": {

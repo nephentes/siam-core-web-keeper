@@ -20,6 +20,8 @@ namespace SiamCoreSite
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            var dbSection = Configuration.GetSection("Database");
         }
 
         public IConfigurationRoot Configuration { get; }

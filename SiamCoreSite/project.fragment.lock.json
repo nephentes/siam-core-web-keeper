@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "HelpersPack/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.2",
+      "compile": {
+        "bin/Debug/HelpersPack.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/HelpersPack.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/HelpersPack.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
