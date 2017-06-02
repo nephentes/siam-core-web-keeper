@@ -2,7 +2,7 @@
   "version": "0.0.1-32",
   "dependencies": {
     "Microsoft.NETCore.App": {
-      "version": "1.0.1",
+      "version": "1.1.1",
       "type": "platform"
     },
     "Microsoft.AspNetCore.Mvc": "1.0.1",
@@ -19,9 +19,9 @@
     "Microsoft.AspNetCore.StaticFiles": "1.1.2",
     "Autofac": "4.6.0",
     "AutoMapper": "6.0.2",
-    "SiamCoreRepository": "1.0.0-*",
     "CoreHelpers": "1.0.0-*",
-    "SiamCoreServices": "1.0.0-*"
+    "SiamCoreServices": "1.0.0-*",
+    "Autofac.Extensions.DependencyInjection": "4.1.0"
   },
 
   "tools": {
@@ -29,15 +29,12 @@
   },
 
   "frameworks": {
-    "netcoreapp1.0": {
+    "netcoreapp1.1": {
       "dependencies": {
-        "HelpersPack": {
-          "target": "project"
-        }
-      
+
       },
       "imports": [
-        "net462",
+        "dotnet5.6",
         "portable-net45+win8"
       ]
     }

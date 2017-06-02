@@ -7,6 +7,8 @@ namespace SiamCoreRepository
     public interface IBaseDAL
     {
 
+        void RecreateDatabase();
+
         DbSet<PluginDefinitionDTO> Plugins { get; set; }
 
         DbSet<UserDTO> Users { get; set; }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CoreHelpers.Generics;
 using Microsoft.AspNetCore.Mvc;
+using SiamCoreRepository;
 using SiamCoreRepository.Definitions;
 using SiamCoreServices;
 using SiamCoreSite.Models;
@@ -20,6 +21,32 @@ namespace SiamCoreSite.Controllers
         public UsersController(IUsersService usersService) : base()
         {
             _usersService = usersService;
+        }
+
+        [HttpGet("init/{token}")]
+        public GenericResponse<bool> InitDatabase(string token)
+        {
+            var retVal = new GenericResponse<bool>(false);
+
+            if (token.Equals("qwerty"))
+            {
+                try
+                {
+                    InitializeService.InitializeDatabase(_usersService, new BaseDAL());
+                    retVal.resultCode = "OK";
+                    retVal.isOk = true;
+                }
+                catch (Exception eX)
+                {
+                    retVal.message = eX.Message;
+                }
+            }
+            else
+            {
+                retVal.resultCode = "BAD_TOKEN";
+            }
+
+            return retVal;
         }
 
         [HttpGet("doLogin/{username}/{password}")]

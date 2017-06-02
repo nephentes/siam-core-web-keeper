@@ -21,6 +21,11 @@ namespace SiamCoreRepository
            
         }
 
+        public void RecreateDatabase()
+        {
+            Database.EnsureCreated();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL(RepositoryConfiguration.ConnectionString);
