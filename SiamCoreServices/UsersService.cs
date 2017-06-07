@@ -16,9 +16,12 @@ namespace SiamCoreServices
 
         private readonly IBaseDAL _baseDAL;
 
-        public UsersService(IBaseDAL baseDAL)
+        private readonly ICoreSession _core;
+
+        public UsersService(IBaseDAL baseDAL, ICoreSession core)
         {
             _baseDAL = baseDAL;
+            _core = core;
         }
 
         public ComplexResult<AdvResultCode, UserDTO> VerifyPassword(string login, string password)
@@ -31,6 +34,7 @@ namespace SiamCoreServices
                 var user = usersWithThatLogin.First();
                 if (user.PwdHash == ShaHelper.GetHash(user.Salt + password))
                 {
+
                     retVal.Result = AdvResultCode.OK;
                     retVal.Data = user;
                 }

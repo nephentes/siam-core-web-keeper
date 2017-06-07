@@ -10,6 +10,9 @@ namespace SiamCoreSite.Models
 
         public DateTime? whenAdded { get; set; }
 
+        // for now here
+        public string currentToken { get; set; }
+
     }
 
 }

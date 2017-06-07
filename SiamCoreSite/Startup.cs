@@ -14,6 +14,7 @@ using SiamCoreSite.Models;
 using AutoMapper;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using SiamCoreServices.Models;
 
 namespace SiamCoreSite
 {
@@ -34,6 +35,7 @@ namespace SiamCoreSite
             // stuff from WCF version to check
             MapperConfigurationExpression mapperConfiguration = new MapperConfigurationExpression();
             mapperConfiguration.CreateMap<UserDTO, UserModel>();
+            mapperConfiguration.CreateMap<UserToken, TokenModel>();
             Mapper.Initialize(mapperConfiguration);
          }
 
@@ -52,6 +54,9 @@ namespace SiamCoreSite
 
             autofacBuilder.RegisterType<SiamCoreRepository.BaseDAL>().As<SiamCoreRepository.IBaseDAL>().InstancePerDependency();
             autofacBuilder.RegisterType<SiamCoreServices.UsersService>().As<SiamCoreServices.IUsersService>().InstancePerDependency();
+
+            autofacBuilder.RegisterType<SiamCoreServices.CoreSession>().As<SiamCoreServices.ICoreSession>().SingleInstance();
+            
             autofacBuilder.Populate(services);
 
 
