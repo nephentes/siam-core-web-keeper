@@ -64,7 +64,6 @@ namespace SiamCoreSite.Controllers
                 {
                     case AdvResultCode.OK:
                         // let's create token :)
-
                         var tokenForUser = _core.CreateToken(loginResult.Data);
                         retVal.resultCode = "OK";
                         retVal.data = Mapper.Map<UserDTO, UserModel>(loginResult.Data);
@@ -95,10 +94,12 @@ namespace SiamCoreSite.Controllers
                 if (checkResult.Result)
                 {
                     retVal.data = Mapper.Map<UserToken, TokenModel>(checkResult.Data);
+                    retVal.data.currentToken = checkResult.Data.Uid;
+                    retVal.data.login = checkResult.Data.User.Login;
                     retVal.resultCode = "OK";
                 } else
                 {
-                    retVal.resultCode = "DENY";
+                    retVal.resultCode = "RELOGIN";
                 }
 
                 retVal.isOk = true;

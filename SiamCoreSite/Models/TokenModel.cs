@@ -8,9 +8,11 @@ namespace SiamCoreSite.Models
     public class TokenModel
     {
 
-        public string Uid { get; set; }
+        public string login { get; set; }
 
-        public DateTime? ValidUntil { get; set; }
+        public string currentToken { get; set; }
+
+        public DateTime? validUntil { get; set; }
 
     }
 }

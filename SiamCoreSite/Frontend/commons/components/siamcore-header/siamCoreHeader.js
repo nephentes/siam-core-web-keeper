@@ -2,10 +2,10 @@
 
 siamCoreApp.component('siamcoreHeader', {
     templateUrl: '/commons/components/siamcore-header/siamCoreHeader.html',
-    controller: ['$timeout', '$http', function ($timeout, $http) {
+    controller: ['$timeout', '$http', '$rootScope', function ($timeout, $http, $rootScope) {
         var ctrl = this;
         //ctrl.backInfo = {};
-        $http({ url: '/api/info/version/aaa', method: 'GET' }).then(function successCallback(response) {
+        $http({ url: '/api/info/version/' + $rootScope.currentToken, method: 'GET' }).then(function successCallback(response) {
             ctrl.backInfo = response.data;
         }, function errorCallback(response) {
             alert('Błąd');
