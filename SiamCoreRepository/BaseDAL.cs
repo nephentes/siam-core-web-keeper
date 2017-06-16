@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SiamCoreRepository.Definitions;
 using MySQL.Data.EntityFrameworkCore.Extensions;
+using System;
 
 namespace SiamCoreRepository
 {
@@ -37,6 +38,8 @@ namespace SiamCoreRepository
             //using modelBuilder to map some relationships
         }
 
+        public DbSet<TestInstanceDTO> Tests { get; set; }
+
         public DbSet<PluginDefinitionDTO> Plugins { get; set; }
 
         public DbSet<UserDTO> Users { get; set; }
@@ -53,6 +56,8 @@ namespace SiamCoreRepository
                 return selfContext;
             }
         }
+
+        
 
         #endregion
 

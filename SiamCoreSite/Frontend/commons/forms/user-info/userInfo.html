@@ -1,0 +1,27 @@
+﻿<div class="container">
+    <form class="form-horizontal" ng-if="!processing">
+        <fieldset>
+            <legend>Current user</legend>
+            <div class="form-group">
+                <label for="inputUser" class="col-lg-2 control-label">Username</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" ng-model="$root.userInfo.login" id="inputUser" placeholder="Username" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">Current token</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" ng-model="$root.userInfo.currentToken" id="inputToken" placeholder="Token" />
+                </div>
+            </div>
+            <!--
+            <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">Valid until</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" ng-model="$root.userInfo.validUntil" id="inputValid" placeholder="Valid"/>
+                </div>
+            </div>
+                -->
+        </fieldset>
+    </form>
+</div>

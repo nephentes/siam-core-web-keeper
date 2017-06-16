@@ -24,6 +24,9 @@ namespace SiamCoreRepository.Definitions
         [Column("dll_file")]
         public string DllFile { get; set; }
 
+        [Column("dll_version")]
+        public string DllVersion { get; set; }
+
         [Column("dll_method")]
         public string DllMethod { get; set; }
 

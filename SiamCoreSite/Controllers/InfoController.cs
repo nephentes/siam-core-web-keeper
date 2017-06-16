@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SiamCoreSite.Models;
 
 namespace SiamCoreSite.Controllers
@@ -17,6 +13,15 @@ namespace SiamCoreSite.Controllers
             var retVal = new InfoModel();
 
             return retVal;
+        }
+
+
+        [HttpGet("dojobs")]
+        public string DoJobs()
+        {
+            //var nextTab = NCrontab.CrontabSchedule.Parse("");
+            //nextTab.GetNextOccurrence()
+            return "OK";
         }
 
     }

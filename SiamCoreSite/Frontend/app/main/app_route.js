@@ -27,6 +27,9 @@ siamCoreApp.config(['$routeProvider', function ($routeProvider) {
              templateUrl: '/commons/forms/user-login/userLogin.html',
              controller: 'userLoginController',
          })
+         .when('/user', {
+             templateUrl: '/commons/forms/user-info/userInfo.html',
+             controller: 'userInfoController',
+         })
         .otherwise({ redirectTo: '/' });
 }]);
-

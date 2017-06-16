@@ -16,6 +16,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SiamCoreRepository", "SiamC
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SiamCoreServices", "SiamCoreServices\SiamCoreServices.xproj", "{A6B15560-861E-4372-8333-E89A87F8F1F3}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CorePlugins", "CorePlugin\CorePlugins.xproj", "{F354261B-502B-4C91-AF06-314CB262CFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{A6B15560-861E-4372-8333-E89A87F8F1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6B15560-861E-4372-8333-E89A87F8F1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6B15560-861E-4372-8333-E89A87F8F1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F354261B-502B-4C91-AF06-314CB262CFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F354261B-502B-4C91-AF06-314CB262CFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F354261B-502B-4C91-AF06-314CB262CFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F354261B-502B-4C91-AF06-314CB262CFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

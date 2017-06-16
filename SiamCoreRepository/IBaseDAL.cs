@@ -9,6 +9,8 @@ namespace SiamCoreRepository
 
         void RecreateDatabase();
 
+        DbSet<TestInstanceDTO> Tests { get; set; }
+
         DbSet<PluginDefinitionDTO> Plugins { get; set; }
 
         DbSet<UserDTO> Users { get; set; }

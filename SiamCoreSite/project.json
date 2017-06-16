@@ -21,7 +21,8 @@
     "AutoMapper": "6.0.2",
     "CoreHelpers": "1.0.0-*",
     "SiamCoreServices": "1.0.0-*",
-    "Autofac.Extensions.DependencyInjection": "4.1.0"
+    "Autofac.Extensions.DependencyInjection": "4.1.0",
+    "ncrontab": "3.3.0"
   },
 
   "tools": {

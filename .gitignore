@@ -13,3 +13,5 @@
 /SiamCoreRepository/bin
 /SiamCoreRepository/obj
 /packages
+/CorePlugin/bin/Debug/netstandard1.6
+/CorePlugin/obj/Debug/netstandard1.6

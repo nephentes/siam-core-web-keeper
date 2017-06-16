@@ -1596,6 +1596,23 @@
           "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll": {}
         }
       },
+      "ncrontab/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Net.Primitives": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/NCrontab.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/NCrontab.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -5367,6 +5384,19 @@
         "lib/net451/MySql.Data.EntityFrameworkCore.xml",
         "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.dll",
         "lib/netstandard1.6/MySql.Data.EntityFrameworkCore.xml"
+      ]
+    },
+    "ncrontab/3.3.0": {
+      "sha512": "oNHphZD7YiqHJoqX5Myw+lfDDTnnI2i+mCuil8MW2gyHaEejhLOdsS9pqVUGAEIJsu4+OL+m3UmkBcw2gkdtsg==",
+      "type": "package",
+      "path": "ncrontab/3.3.0",
+      "files": [
+        "COPYING.txt",
+        "lib/net35/NCrontab.dll",
+        "lib/netstandard1.0/NCrontab.dll",
+        "lic/OpenSymphony.txt",
+        "ncrontab.3.3.0.nupkg.sha512",
+        "ncrontab.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -10551,10 +10581,33 @@
       "Microsoft.Extensions.Logging.Debug >= 1.0.0",
       "Microsoft.Extensions.Options.ConfigurationExtensions >= 1.0.0",
       "Microsoft.NETCore.App >= 1.1.1",
-      "SiamCoreServices >= 1.0.0-*"
+      "SiamCoreServices >= 1.0.0-*",
+      "ncrontab >= 3.3.0"
     ],
     ".NETCoreApp,Version=v1.1": []
   },
-  "tools": {},
-  "projectFileToolGroups": {}
+  "tools": {
+    ".NETCoreApp,Version=v1.0": {
+      "Microsoft.AspNetCore.Server.IISIntegration.Tools/1.0.0-preview2-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.ProjectModel": "1.0.0-rc3-003121",
+          "Microsoft.Extensions.CommandLineUtils": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.0",
+          "System.Diagnostics.Process": "4.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/dotnet-publish-iis.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/dotnet-publish-iis.dll": {}
+        }
+      }
+    }
+  },
+  "projectFileToolGroups": {
+    ".NETCoreApp,Version=v1.0": [
+      "Microsoft.AspNetCore.Server.IISIntegration.Tools >= 1.0.0-preview2-final"
+    ]
+  }
 }
